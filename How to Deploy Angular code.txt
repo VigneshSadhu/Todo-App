@@ -1,0 +1,8 @@
+Deploying angular code into github using gitbash.
+cd Todo
+    git init
+    touch .gitignore
+    git add .
+    git commit -m "Initial commit of Angular project"
+    git remote add origin https://github.com/VigneshSadhu/Todo-App.git
+    git push -u origin master
