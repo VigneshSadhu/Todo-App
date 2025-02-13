@@ -1,0 +1,105 @@
+.todos {
+    display: flex; /* Arrange todos horizontally */
+    flex-direction: column; /* Stack todos vertically */
+    gap: 10px; /* Space between todos */
+    padding: 20px; /* Add padding around the todos container */
+  }
+  
+  .todo {
+    display: flex; /* Arrange items within each todo horizontally */
+    align-items: center; /* Vertically align items in the todo */
+    padding: 15px; /* Add padding within each todo */
+    border: 1px solid #ccc; /* Add a border to each todo */
+    border-radius: 5px; /* Round the corners of the todo */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: #f8f8f8; /* Light background color */
+  }
+  
+  .id {
+    width: 30px; /* Fixed width for the ID */
+    text-align: center; /* Center the ID text */
+    margin-right: 10px; /* Space between ID and content */
+    color: #777; /* Slightly darker ID color */
+  }
+  
+  .content {
+    flex-grow: 1; /* Allow content to take up available space */
+    word-wrap: break-word; /* Allow long words to wrap */
+  }
+  
+  .delete {
+    background-color: #f44336; /* Red delete button */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px; /* Space between content and button */
+    cursor: pointer;
+    border-radius: 5px; /* Round the button corners */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  .delete:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  
+  .add {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .add form {
+    display: flex;
+    width: 50%; /* Adjust as needed */
+    max-width: 400px;
+  }
+  
+  .add input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .add button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+
+
+
+
+  /* Responsive adjustments (example) */
+  @media (max-width: 600px) {
+    .todos {
+      flex-direction: column; /* Stack vertically on smaller screens */
+    }
+  
+    .todo {
+      flex-direction: column; /* Stack todo items vertically */
+      align-items: flex-start; /* Align items to the left */
+    }
+  
+    .id {
+      margin-right: 0;
+      margin-bottom: 5px; /* Add space below ID */
+    }
+  
+    .delete {
+      margin-left: 0;
+      margin-top: 5px; /* Add space above button */
+      width: 100%; /* Make button full width */
+    }
+  }
